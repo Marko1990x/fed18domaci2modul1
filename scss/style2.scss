@@ -42,3 +42,64 @@ section h2{
     margin-bottom: 1em;
 
 }
+
+section:nth-child(even) {background: $nthcolor}  /* ciljanje svakog drugog elementa sekcije moze i odd za drugu variantu*/
+section:nth-child(even) h2{
+    text-align: right;
+    color: $colorwhite;
+    border-bottom: 1px solid white;
+}
+
+section:nth-child(odd) {background: $colorwhite}
+
+section:nth-child(odd) h2{
+
+    text-align: left;
+    color: $h2left;
+    border-bottom: 1px solid $h2left;
+
+}
+
+div.row div{
+    vertical-align: top;
+    display: inline-block;
+    margin: 0 10px 10px 0; /* top right bottom left*/
+    width: 274px;
+    min-height: 200px;
+    border: 1px solid $border;  
+    box-shadow: 1px 2px 2px $border;  /*daje dubinu text boxu*/
+
+}
+ 
+div.row div:nth-child(3n){    /* ignorise marginu za divove */
+    margin-right: 0%;
+}
+
+div.row h3{
+    line-height: 1.75em; /* stavlja visinu elementa sa ove strane tako da je text u stedini elementa*/
+    margin: 0%;       /*centrira element na nultu poziciju */
+    padding: 0% 1em; /* pomera na desno element*/
+}
+
+
+div.row div:nth-child(3n+1) h3{   /* Postavlja boje po iteraciji elemenata prvo ova pa sledeca itd*/ 
+	background:#ff6f00;
+}
+
+div.row div:nth-child(3n+2) h3{
+	background:#f50057;
+}
+
+div.row div:nth-child(3n+3) h3{
+	background:#00bfa5 ;
+}
+
+div.row div p{
+    margin: 0%;
+    padding: 0em 1em;
+}
+
+body header h1{
+    color: #f50057;
+    text-transform: uppercase;
+}
